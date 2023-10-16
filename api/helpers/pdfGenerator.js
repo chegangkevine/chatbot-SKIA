@@ -3,18 +3,18 @@ const axios = require('axios');
 const moment = require('moment');
 require('moment/locale/fr'); // Importez la localisation française
 
-async function generatePDFBuffer(user,phone,idTransaction,forfait,operator,amount,due) {
+async function generatePDFBuffer(user,phone,idTransaction,forfait,operator,amount,due,logo,background_logo) {
   return new Promise(async (resolve, reject) => {
     const doc = new PDFDocument();
 
     // Load the watermark image
-    const watermarkResponse = await axios.get('https://res.cloudinary.com/dmfjhas5a/image/upload/v1696281554/watermark_kl7nvs.png', {
+    const watermarkResponse = await axios.get(background_logo, {
       responseType: 'arraybuffer' // Set response type to 'arraybuffer'
     });
     const watermarkImage = Buffer.from(watermarkResponse.data);
 
     // Load the logo image
-    const logoResponse = await axios.get("https://res.cloudinary.com/dmfjhas5a/image/upload/v1696281739/SK-IA_amvr1a.png", {
+    const logoResponse = await axios.get(logo, {
       responseType: 'arraybuffer' // Set response type to 'arraybuffer'
     });
     const logoImage = Buffer.from(logoResponse.data);
@@ -28,7 +28,7 @@ async function generatePDFBuffer(user,phone,idTransaction,forfait,operator,amoun
     const dueDate = now.clone().add(due, 'days');
 
     // Invoice Information
-    doc.fontSize(12).text(`Invoice number: ${idTransaction}`, 50, 190);
+    doc.fontSize(12).text(`Numéro de facture: ${idTransaction}`, 50, 190);
     doc.fontSize(12).text(`Opérateur: ${operator}`, 50, 210);
     doc.fontSize(12).text(`Date d'échéance forfait: ${dueDate.format('dddd D MMMM YYYY [à] HH[h]mm')}`, 50, 230);
 
