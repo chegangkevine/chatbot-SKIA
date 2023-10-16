@@ -1,0 +1,60 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Python27\;C:\Python27\Scripts;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Users\Mercure Mekinda\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\PuTTY\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Users\Mercure Mekinda\AppData\Local\Android\Sdk\platform-tools;C:\gradle\bin;C:\ProgramData\chocolatey\bin;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Users\Mercure Mekinda\AppData\Local\Android\Sdk\tools;C:\Users\Mercure Mekinda\AppData\Local\Android\Sdk\tools;C:\Users\Mercure Mekinda\AppData\Local\Microsoft\WindowsApps;C:\Users\Mercure Mekinda\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\heroku\bin;C:\Users\Mercure Mekinda\AppData\Local\Yarn\bin;C:\Program Files\Java\jdk-11;C:\Users\Mercure Mekinda\AppData\Local\Android\Sdk;C:\Users\Mercure Mekinda\AppData\Roaming\Composer\vendor\bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.19.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: read ECONNRESET
+      at TLSWrap.onStreamRead (node:internal/stream_base_commons:217:20)
+
+npm manifest: 
+  {
+    "name": "mybot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "axios": "^1.4.0",
+      "bcrypt": "^5.1.0",
+      "body-parser": "^1.20.2",
+      "cookie-parser": "^1.4.6",
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.3",
+      "express": "^4.18.2",
+      "fs": "^0.0.1-security",
+      "http-errors": "^2.0.0",
+      "jsonwebtoken": "^9.0.1",
+      "moment": "^2.29.4",
+      "mongoose": "^7.4.3",
+      "node-cron": "^3.0.2",
+      "nodemon": "^3.0.1",
+      "openai": "^4.10.0",
+      "pdfkit": "^0.13.0",
+      "pino": "^8.15.1",
+      "pino-pretty": "^10.2.0",
+      "qrcode-terminal": "^0.12.0",
+      "whatsapp-web.js": "^1.19.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

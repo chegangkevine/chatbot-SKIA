@@ -3,7 +3,7 @@ const axios = require('axios');
 
 async function processPayment(msg, phoneNumber, selectedForfait, transactionSteps) {
   const paymentData = {
-    service: process.env.PAYMENT_SERVICE_ID,
+    service: process.env.PAYMENT_SERVICE_ID, 
     phonenumber: phoneNumber.replace(/^\+/, '').replace(/\s/g, ''),
     amount: "1",
     // selectedForfait?.price,
